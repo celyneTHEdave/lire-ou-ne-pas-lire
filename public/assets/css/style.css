@@ -1,0 +1,267 @@
+/* ••••••••••••••••••
+•••••••GLOBAL••••••••
+•••••••••••••••••• */
+
+html {
+/*   font-size: 17px; */
+  margin: auto;
+}
+
+/* palette couleurs:
+  bleu clair = 88,166,176
+  bleu foncé=50,58,96
+  jaune=229,190,81
+  beige clair=243,236,225 */
+
+/* polices:
+  font-family: 'Swear Display', serif;
+  font-family: 'PT Sans Pro', sans-serif; */
+
+
+
+/* ••••••••••••••••••
+•••••••••MENU••••••••
+•••••••••••••••••• */
+
+.nav li {
+  font-family: 'PT Sans Pro', sans-serif;
+  text-decoration: none;
+  display: inline;
+}
+
+.header {
+  height: 5em;
+  width: 100%;
+  background-color: rgb(50, 58, 96);
+  display: inline-block;
+}
+
+.header a{
+  text-decoration: none;
+  color: rgb(243,236,225);
+  padding: 1em;
+}
+
+.header a:hover {
+  color: rgb(229,190,81);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'PT Sans Pro', sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.05em;
+}
+
+.nav {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.blogtitle {
+  font-family: 'Swear Display', serif;
+  font-weight: 400;
+  font-size: 2em;
+}
+
+
+/* ••••••••••••••••••
+•••••••••MAIN••••••••
+•••••••••••••••••• */
+
+.main {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+/*   align-content: center;
+  justify-content: space-between; */
+}
+
+/* ••••••••••••••••••
+••••••••INTRO••••••••
+•••••••••••••••••• */
+
+.intro {
+  padding: 5em;
+  margin: auto;
+/*   position: relative; */
+  display: flex;
+}
+
+.intro_text {
+  background-color: rgb(88,166,176);
+  color: rgb(50, 58, 96);
+  width: 20em;
+  display: block;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 2em;
+/*   position: absolute;
+  top: 15em;
+  left: 3em; */
+  font-family: 'PT Sans Pro', sans-serif;
+  font-weight: 100;
+}
+
+.intro img {
+  width: 35em;
+/*   position: absolute;
+  top: 10em;
+  right: 5em; */
+}
+
+.intro h2 {
+  font-family: 'Swear Display', serif;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.05em;
+}
+
+.intro p {
+  font-size: 1.2em;
+}
+
+
+/* ••••••••••••••••••
+••••••A LA UNE•••••••
+•••••••••••••••••• */
+
+.headline {
+  padding: 5em;
+  margin: auto;
+  display: flex;
+  width: 75%;
+  color: rgb(50, 58, 96);
+/*   position: relative; */
+}
+
+.headline h2 {
+  font-family: 'Swear Display', serif;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.05em;
+}
+
+.headline img {
+  width: 35em;
+/*   position: absolute;
+  top: 10em;
+  left: 29em; */
+}
+
+/* .headline_card {
+  display:flex;
+} */
+
+.headline_text {
+  font-family: 'PT Sans Pro', sans-serif;
+  display:inline-block;
+}
+
+.headline_text h3 {
+  font-family: 'Swear Display', serif;
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
+}
+
+.headline a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1em;
+  font-family: 'Swear Display', serif;
+  background-color: rgb(50, 58, 96);
+  border-radius: 0.2em;
+  padding: 0.5em;
+  letter-spacing: 0.05em;
+}
+
+.headline p {
+  margin-bottom: 1em;
+  font-size: 1.2em;
+}
+
+.headline_intro {
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 2em;
+  background-color: rgb(229,190,81);
+  width: 30em;
+/*   position: absolute;
+  top: 10em;
+  left: 0; */
+}
+
+/* ••••••••••••••••••
+•••••NEWSLETTER••••••
+•••••••••••••••••• */
+
+.newsletter {
+  padding: 0em 2em 2em 2em;
+  margin-bottom: 5em;
+  font-size: unset;
+  border: black solid 1px;
+}
+
+.newsletter h2 {
+  font-family: 'Swear Display', serif;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.05em;
+}
+
+.newsletter p {
+  font-family: 'PT Sans Pro', sans-serif;
+}
+
+.newsletter_form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit_button {
+  color: rgb(255, 255, 255);
+  font-size: 1em;
+  font-family: 'Swear Display', serif;
+  background-color: rgb(50, 58, 96);
+  border-radius: 0.2em;
+  padding: 0.5em;
+  letter-spacing: 0.1em;
+  margin-top: 0.5em;
+}
+
+/* ••••••••••••••••••
+••••••BOOK LIST••••••
+•••••••••••••••••• */
+
+.list_container {
+  margin: auto;
+  width: 80%;
+}
+
+.list_container h2 {
+  font-family: 'Swear Display', serif;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.05em;
+}
+
+.list_container ul {
+  font-family: 'Swear Display', serif;
+  font-weight: 100;
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+.list_container a {
+  font-family: 'PT Sans Pro', sans-serif;
+  font-weight: 100;
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
+  text-align: left;
+  text-decoration: none;
+  color: rgb(88,166,176);
+}

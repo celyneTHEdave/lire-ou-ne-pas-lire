@@ -1,0 +1,9 @@
+IS WRITTEN BY, 11> AUTHOR, 11< BOOK
+CAN HAVE, 1N< BOOK, 1N< TYPE
+WRITES, 1N> BOOK, 1N< AUTHOR
+HAS, 11> RATE, 11> BOOK
+
+AUTHOR: name
+TYPE: name
+BOOK: title, author, picture, editor, published_fate, type, rate, summary, review
+RATE: picture, name

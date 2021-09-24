@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+</style>
+</head>
+<body>
+<div id='mld'>
+<div>
+  <span class='relation'>CAN HAVE</span> (
+    <span class='foreign primary'>title</span>,
+    <span class='foreign primary'>name</span>
+  )
+</div>
+<div>
+  <span class='relation'>WRITES</span> (
+    <span class='foreign primary'>title</span>,
+    <span class='foreign primary'>name</span>
+  )
+</div>
+<div>
+  <span class='relation'>AUTHOR</span> (
+    <span class='primary'>name</span>,
+    <span class='foreign'>title</span>
+  )
+</div>
+<!--
+<div>
+  <span class='relation'>TYPE</span> (
+    <span class='primary'>name</span>
+  )
+</div>
+-->
+<div>
+  <span class='relation'>BOOK</span> (
+    <span class='primary'>title</span>,
+    <span class='normal'>author</span>,
+    <span class='normal'>picture</span>,
+    <span class='normal'>editor</span>,
+    <span class='normal'>published_fate</span>,
+    <span class='normal'>type</span>,
+    <span class='normal'>rate</span>,
+    <span class='normal'>summary</span>,
+    <span class='normal'>review</span>
+  )
+</div>
+<div>
+  <span class='relation'>RATE</span> (
+    <span class='primary'>picture</span>,
+    <span class='normal'>name</span>,
+    <span class='foreign'>title</span>
+  )
+</div>
+</div>
+</body>
+</html>
