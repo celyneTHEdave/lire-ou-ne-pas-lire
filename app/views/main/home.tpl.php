@@ -10,32 +10,40 @@
         
 
         <div class="headline">
+            <div><?php foreach($bookList as $currentBook) : ?>
+                <img src="<?= $currentBook->getBookpicture();?>" alt="imageintro" class="introimage">
+                <?php endforeach; ?>
+            </div>
             <div class="headline_intro">
                 <h2>L'oeuvre à la une</h2>
-                <div class="headline_card"><?php foreach($bookList as $currentBook) : ?>
+                <div><?php foreach($bookList as $currentBook) : ?>
                     <div class="headline_text">
                         <h3><?= $currentBook->getTitle(); ?></h3>
-                        <div><?= $currentBook->getAuthor(); ?></div>
-                        <div><?= $currentBook->getEditor(); ?></div>
-                        <div><?= $currentBook->getPublished_in(); ?></div>
-                        <div><?= $currentBook->getType(); ?></div>
-                        <div><?= $currentBook->getRate(); ?></div>
+                        <h4><?= $currentBook->getName(); ?></h4>
+                        <div><strong>Editeur :&nbsp;</strong><?= $currentBook->getEditor(); ?></div>
+                        <div><strong>Genre :&nbsp;</strong><?= $currentBook->getTypename(); ?></div>
+                        <div><strong>Notre avis :&nbsp;</strong><?= $currentBook->getRatename(); ?></div>
                         <p><?= $currentBook->getSummary(); ?></p>
-                        <a href="<?= $router->generate('author-list'); ?>" >Voir plus</a>
+                        <?php $updateUrl = $router->generate('book-review', ['bookId' => $currentBook->getBookid()]) ?>
+                        <a href="<?= $updateUrl; ?>" >Voir plus</a>
                     </div>
-                <?php endforeach; ?></div>
+                    <?php endforeach; ?>
+                </div>
             </div>
-            <img src="assets/images/bridgetjones1.png" alt="imageintro" class="introimage">
         </div>    
 
         <div class="newsletter">
-            <h2>Restez au courant</h3>
-            <p>Vous voulez recevoir une alerte à chaque nouvelle revue de livre? Inscrivez vous à notre newsletter!</p>
-            <div class="newsletter_form">
-                <form action="/leads-subscribing-newsletter" method="post">
-                    <div><label for="email"></label> <input id="email" name="subscriber_email" type="email" placeholder="votre e-mail"></div>
-                    <div><button class="submit_button" type="submit">S&#39;abonner</button> </div>
-                </form>
+            <img src="assets/images/operatrice.jpg" alt="imagenewsletter" class="newsletter_image">
+            <div class="newsletter_text">
+                <h3>Restez au courant</h3>
+                <p>Vous voulez recevoir une alerte à chaque nouvelle revue de livre? Inscrivez vous à notre newsletter!</p>
+                <div class="newsletter_form">
+                    <form action="/leads-subscribing-newsletter" method="post">
+                        <div><label for="email"></label> <input id="email" name="subscriber_email" type="email" placeholder="votre e-mail"></div>
+                        <div><button class="submit_button" type="submit">S&#39;abonner</button> </div>
+                    </form>
+                </div>
+                <p class="newsletter_mentions">En vous inscrivant à la nexsletter, vous acceptez de donner accès à Lire ou ne pas lire à votre e-mail.Cette information est strictement confidentielle. Elle est destinée à l’usage exclusif de Lire ou ne pas lire. Conformément aux dispositions de la loi Informatique et Libertés du 6 Janvier 1978, le Client dispose d'un droit total d'accès, de modification, de rectification et de suppression des données personnelles le concernant. Le Client peut exercer son droit en envoyant un email au service client de Lire ou ne pas lire à contact@lireounepaslire.com</p>
             </div>
         </div>
     </div>

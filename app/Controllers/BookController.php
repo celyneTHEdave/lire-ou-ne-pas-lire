@@ -20,4 +20,18 @@ class BookController extends CoreController {
             'bookList' => $allBooks,
         ]);
     }
+
+
+    /* Méthode s'occupant de la page de review */
+
+    public function review($id)
+    {
+        $bookToDisplay = Book::find($id);
+
+        $this->show('book/review', [
+            'pageTitle' => 'Revue du livre',
+            'bookReview' => $bookToDisplay,
+        ]);
+    }
+
 }

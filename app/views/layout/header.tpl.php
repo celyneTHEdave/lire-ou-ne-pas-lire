@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="https://use.typekit.net/ort8yhw.css">
     <link rel="stylesheet" href="<?= $assetsBaseUri; ?>css/style.css">
 
+    <script src="https://kit.fontawesome.com/25096db116.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
 
 <?php 
 require __DIR__ . '/../partials/nav.tpl.php';
-
+require __DIR__ . '/../partials/socials.tpl.php';
 

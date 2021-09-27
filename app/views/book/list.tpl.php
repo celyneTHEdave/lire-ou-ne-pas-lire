@@ -1,12 +1,20 @@
-    <div class="list_container">
-        <h2>Liste des livres</h2>
+ 
+ <div class="list_container">
+        <h2>Tous les livres</h2>
             <ul>
-                <?php foreach($bookList as $currentbook) : ?>
+                <?php foreach($bookList as $currentBook) : ?>
                 <li>
-                    <strong><?= $currentbook->getTitle(); ?></strong>, de <?= $currentbook->getAuthor(); ?>
-                    <a href="<?= $router->generate('book-review'); ?>" >&#9758;</a>
+                    <?= $currentBook->getTitle(); ?><span class="booklist">, de <?= $currentBook->getName(); ?></span>
+                    <!-- envoi vers la page du livre demandé -->
+                    <?php $updateUrl = $router->generate('book-review', ['bookId' => $currentBook->getBookid()]) ?>
+                    <a href="<?= $updateUrl; ?>" >&#9758;</a>
                 </li>
                 <?php endforeach; ?>
             </ul>
     </div>
 
+<!-- //TODO
+rajouter un menu déroulant pour choisir l'ordre d'affichage:
+• par ordre alphabétique (par défaut)
+• par ordre d'avis (ascendant)
+• par ordre d'avis (descendant) -->

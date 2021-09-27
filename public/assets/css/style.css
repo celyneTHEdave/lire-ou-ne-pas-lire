@@ -8,10 +8,10 @@ html {
 }
 
 /* palette couleurs:
-  bleu clair = 88,166,176
+  bleu clair = 90, 156, 191
   bleu foncé=50,58,96
-  jaune=229,190,81
-  beige clair=243,236,225 */
+  jaune=205, 244, 249
+  beige clair=238, 236, 221 */
 
 /* polices:
   font-family: 'Swear Display', serif;
@@ -20,39 +20,38 @@ html {
 
 
 /* ••••••••••••••••••
-•••••••••MENU••••••••
+••••••••HEADER•••••••
 •••••••••••••••••• */
 
 .nav li {
-  font-family: 'PT Sans Pro', sans-serif;
-  text-decoration: none;
   display: inline;
 }
 
 .header {
-  height: 5em;
+  height: 11em;
   width: 100%;
   background-color: rgb(50, 58, 96);
   display: inline-block;
 }
 
 .header a{
+  font-family: 'Swear Display', serif;
   text-decoration: none;
-  color: rgb(243,236,225);
-  padding: 1em;
+  color: rgb(238, 236, 221);
+  padding: 2em;
+  font-size: 1.5em;
+  letter-spacing: 0.06em;
+  font-weight: 400;
 }
 
 .header a:hover {
-  color: rgb(229,190,81);
+  color: rgb(205, 244, 249);
 }
 
 .menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: 'PT Sans Pro', sans-serif;
-  font-weight: 100;
-  letter-spacing: 0.05em;
 }
 
 .nav {
@@ -76,8 +75,6 @@ html {
   width: 80%;
   display: flex;
   flex-direction: column;
-/*   align-content: center;
-  justify-content: space-between; */
 }
 
 /* ••••••••••••••••••
@@ -86,31 +83,31 @@ html {
 
 .intro {
   padding: 5em;
-  margin: auto;
-/*   position: relative; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  position: relative;
+  left: 6em;
   display: flex;
 }
 
 .intro_text {
-  background-color: rgb(88,166,176);
-  color: rgb(50, 58, 96);
+  background-color: rgba(90, 156, 191, 0.7);
+  color: rgb(50,58,96);
   width: 20em;
   display: block;
   padding-left: 2em;
   padding-right: 2em;
   padding-bottom: 2em;
-/*   position: absolute;
-  top: 15em;
-  left: 3em; */
+  position: absolute;
+  top: 11em;
+  left: -17em;
   font-family: 'PT Sans Pro', sans-serif;
   font-weight: 100;
 }
 
 .intro img {
   width: 35em;
-/*   position: absolute;
-  top: 10em;
-  right: 5em; */
 }
 
 .intro h2 {
@@ -134,37 +131,39 @@ html {
   margin: auto;
   display: flex;
   width: 75%;
-  color: rgb(50, 58, 96);
-/*   position: relative; */
+  position: relative;
+  margin-top: 0;
 }
 
 .headline h2 {
   font-family: 'Swear Display', serif;
   font-weight: 400;
-  font-size: 2.5em;
+  font-size: 3em;
   letter-spacing: 0.05em;
-}
-
-.headline img {
-  width: 35em;
-/*   position: absolute;
-  top: 10em;
-  left: 29em; */
-}
-
-/* .headline_card {
-  display:flex;
-} */
-
-.headline_text {
-  font-family: 'PT Sans Pro', sans-serif;
-  display:inline-block;
+  margin-bottom: 0;
 }
 
 .headline_text h3 {
   font-family: 'Swear Display', serif;
-  font-size: 1.5em;
+  font-size: 1.7em;
   letter-spacing: 0.05em;
+  margin-bottom: 0;
+}
+.headline_text h4 {
+  font-family: 'Swear Display', serif;
+  font-size: 1.5em;
+  font-weight: 100;
+  letter-spacing: 0.05em;
+  margin-top: 0;
+}
+
+.headline img {
+  width: 30em;
+}
+
+.headline_text {
+  font-family: 'PT Sans Pro', sans-serif;
+  display:inline-block;
 }
 
 .headline a {
@@ -179,19 +178,20 @@ html {
 }
 
 .headline p {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   font-size: 1.2em;
 }
 
 .headline_intro {
-  padding-left: 2em;
+  padding-left: 4em;
   padding-right: 2em;
-  padding-bottom: 2em;
-  background-color: rgb(229,190,81);
+  padding-bottom: 3em;
+  background-color: rgba(205, 244, 249, 0.9);
+  color: rgb(50, 58, 96);
   width: 30em;
-/*   position: absolute;
-  top: 10em;
-  left: 0; */
+  position: absolute;
+  top: 3em;
+  left: 33em;
 }
 
 /* ••••••••••••••••••
@@ -201,15 +201,38 @@ html {
 .newsletter {
   padding: 0em 2em 2em 2em;
   margin-bottom: 5em;
+  margin-top: 7em;
   font-size: unset;
-  border: black solid 1px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 }
 
-.newsletter h2 {
+.newsletter_image {
+  width: 30em;
+  position: absolute;
+}
+
+.newsletter_text {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  font-size: 1.2em;
+  background-color: rgba(238, 236, 221, 0.8);
+  color: rgb(50,58,96);
+  width: 26em;
+  height: 28em;
+  position: absolute;
+  top: 2em;
+  left: -26em;
+}
+
+.newsletter h3 {
   font-family: 'Swear Display', serif;
   font-weight: 400;
-  font-size: 2.5em;
+  font-size: 2.3em;
   letter-spacing: 0.05em;
+  margin-top: 0.6em;
 }
 
 .newsletter p {
@@ -219,6 +242,14 @@ html {
 .newsletter_form {
   display: flex;
   justify-content: space-between;
+}
+
+#email {
+  width: 20em;
+  padding: 0.5em;
+  font-size: 1em;
+  font-family: 'PT Sans Pro', sans-serif;
+
 }
 
 .submit_button {
@@ -232,13 +263,84 @@ html {
   margin-top: 0.5em;
 }
 
+.newsletter_mentions {
+  font-size: 0.7em;
+  color: rgb(50, 58, 96);
+  line-height: 1.6em;
+  padding-right: 2em;
+  padding-top: 1em;
+  text-align: justify;
+}
+
+
+/* ••••••••••••••••••
+••••••••FOOTER•••••••
+•••••••••••••••••• */
+
+#footer {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  font-family: 'Swear Display', serif;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  margin-top: 10em;
+  padding-top: 2em;
+  padding-bottom: 3em;
+  background-color: rgb(50,58,96);
+  color: rgb(238, 236, 221);
+  position: relative;
+  top: 32em;
+}
+
+#footer a {
+  font-weight: 400;
+}
+
+/* ••••••••••••••••••
+••••••SOCIALS••••••
+•••••••••••••••••• */
+
+.socials {
+  width: 2.6em;
+  height: 7em;
+  border: rgb(90, 156, 191) solid 1px;
+  border-width: 4px 4px 4px 0;
+  position: sticky;
+  top: 25.5em;
+  padding: 0.5em;
+  border-radius: 0 10px 10px 0;
+  background-color: white;
+  display: none;
+}
+
+.fa-instagram {
+  font-size: 2.5em;
+  color: rgb(50, 58, 96);
+}
+
+.fa-facebook-square {
+  font-size: 2.4em;
+  color: rgb(50, 58, 96);
+}
+
+.instagram {
+  padding-bottom: 1em;
+  padding-top: 0.5em;
+}
+
 /* ••••••••••••••••••
 ••••••BOOK LIST••••••
+•••••••••••••••••• */
+
+/* ••••••••••••••••••
+••••AUTHOR LIST••••••
 •••••••••••••••••• */
 
 .list_container {
   margin: auto;
   width: 80%;
+  text-align: center;
 }
 
 .list_container h2 {
@@ -250,11 +352,19 @@ html {
 
 .list_container ul {
   font-family: 'Swear Display', serif;
-  font-weight: 100;
+  font-weight: 400;
   font-size: 1.5em;
   letter-spacing: 0.05em;
   text-align: left;
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
 }
+
+.list_container_author::first-letter {
+  color: rgb(90, 156, 191);
+  font-size: 130%;
+} 
 
 .list_container a {
   font-family: 'PT Sans Pro', sans-serif;
@@ -263,5 +373,61 @@ html {
   letter-spacing: 0.05em;
   text-align: left;
   text-decoration: none;
-  color: rgb(88,166,176);
+  color: rgb(90, 156, 191);
+}
+
+.booklist {
+  font-size: 0.8em;
+}
+
+
+/* ••••••••••••••••••
+•••••BOOK REVIEW•••••
+•••••••••••••••••• */
+
+.review {
+  border: black solid 2px;
+  width: 70%;
+  margin: 5em auto 5em auto;
+}
+
+.review_card {
+  font-family: 'PT Sans Pro', sans-serif;
+  padding-left: 3em;
+  display: flex;
+}
+
+.review_text {
+ width: 58%;
+ padding-right: 2em;
+}
+
+.review_text h3 {
+  font-family: 'Swear Display', serif;
+  font-size: 3em;
+  font-weight: 400;
+  margin-top: 0;
+  padding-top: 0.5em;
+  margin-bottom: 0;
+}
+
+.review_text h4 {
+  font-family: 'Swear Display', serif;
+  font-size: 2em;
+  font-weight: 100;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.review_image {
+  width: 30em;
+
+}
+
+.review_couv {
+  width: 6em;
+}
+
+.summary_review {
+  padding-top: 1em;
 }

@@ -72,7 +72,7 @@ $router->map(
 
 $router->map(
     'GET',
-    '/book/review',
+    '/book/review/[i:bookId]',
     [
         'method' => 'review',
         'controller' => '\App\Controllers\BookController'

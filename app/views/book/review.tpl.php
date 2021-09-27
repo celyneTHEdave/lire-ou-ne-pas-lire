@@ -1,19 +1,21 @@
-<h2></h2>
+    <div class="review">
+            <div class="review_card">
 
-<div class="headline">
-            <h2>L'oeuvre à la une</h2>
-            <div class="headline_card"><?php foreach($bookList as $currentBook) : ?>
-                <img src="<?= $currentBook->getPicture(); ?>">
-                    <div class="headline_text">
-                        <h3><?= $currentBook->getTitle(); ?></h3>
-                        <div><?= $currentBook->getAuthor(); ?></div>
-                        <div><?= $currentBook->getEditor(); ?></div>
-                        <div><?= $currentBook->getPublished_in(); ?></div>
-                        <div><?= $currentBook->getType(); ?></div>
-                        <div><?= $currentBook->getRate(); ?></div>
-                        <div><?= $currentBook->getSummary(); ?></div>
-                        <a href="<?= $router->generate('author-list'); ?>" >Voir plus</a>
+                    <div class="review_text">
+                        <h3><?= $bookReview->getTitle(); ?></h3>
+                        <h4><?= $bookReview->getName(); ?></h4>
+                        <div><img src="<?= $bookReview->getCouvpicture(); ?>" alt="review_image" class="review_couv"></div>
+                        <div><strong>Editeur :&nbsp;</strong><?= $bookReview->getEditor(); ?></div>
+                        <div><strong>Genre :&nbsp;</strong>:<?= $bookReview->getTypename(); ?></div>
+                        <div ><strong>Notre avis :&nbsp;</strong><?= $bookReview->getRatename(); ?></div>
+                        <div class="summary_review"><strong>Résumé :&nbsp;</strong><?= $bookReview->getSummary(); ?></div>
+                        <div class="our_review"><strong>Notre revue :&nbsp;</strong><?= $bookReview->getReview(); ?></div>
                     </div>
-                <?php endforeach; ?>
+                    <div class="review_image">
+                        <img src="<?= $bookReview->getBookpicture(); ?>" alt="review_image" class="review_image">
+                    </div>
+
             </div>
-        </div>
+    </div>
+
+    <a href="<?= $router->generate('book-list'); ?>" >Voir plus de livres</a>

@@ -5,21 +5,16 @@ namespace App\Controllers;
 class CoreController {
 
     /**
-     * Méthode permettant d'afficher du code HTML en se basant sur les views
-     *
-     * @param string $viewName Nom du fichier de vue
-     * @param array $viewData Tableau des données à transmettre aux vues
-     * @return void
+     * Méthode pour afficher le code HTML des views
      */
     protected function show(string $viewName, $viewData = []) {
         
         global $router;
         $viewData['currentPage'] = $viewName; 
 
-        // définir l'url absolue pour nos assets
+        // url absolue pour les assets
         $viewData['assetsBaseUri'] = $_SERVER['BASE_URI'] . 'assets/';
-        // définir l'url absolue pour la racine du site
-        // /!\ != racine projet, ici on parle du répertoire public/
+        // url absolue pour la racine du site
         $viewData['baseUri'] = $_SERVER['BASE_URI'];
 
         extract($viewData);

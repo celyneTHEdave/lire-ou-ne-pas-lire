@@ -1,7 +1,7 @@
 
     <nav class="header">
         <div class="menu">
-            <a href="<?= $router->generate('main-home'); ?>"><span class="blogtitle">Lire</span> ou ne pas lire...</a>
+            <a href="<?= $router->generate('main-home'); ?>"><span class="blogtitle">Lire &nbsp;</span> ou ne pas lire...</a>
 
             <div class="nav">
                 <ul class="">

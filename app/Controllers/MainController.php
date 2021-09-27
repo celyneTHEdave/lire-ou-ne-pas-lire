@@ -15,12 +15,8 @@ class MainController extends CoreController {
      */
     public function home()
     {
-        // on récupère la liste des catégories
-        $bookForHome = Book::findBookHomepage();
 
-        // On appelle la méthode show() de l'objet courant
-        // En argument, on fournit le fichier de Vue
-        // Par convention, chaque fichier de vue sera dans un sous-dossier du nom du Controller
+        $bookForHome = Book::findBookHomepage();
         $this->show('main/home', [
             'pageTitle' => 'Home',
             'bookList' => $bookForHome,
