@@ -1,7 +1,7 @@
 
     <div class="main">
         <div class="intro">
-            <img src="assets/images/Camille_corot_liseuse.jpg" alt="imageintro" class="introimage">
+<!--             <img src="assets/images/Camille_corot_liseuse.jpg" alt="imageintro" class="introimage"> -->
             <div class="intro_text">
                 <h2>Bienvenue dans le blog de lecture <strong>Lire ou ne pas lire...</strong>...</h2>
                 <p>Vous trouverez dans ce blog nos avis sur nos lectures. Vous cherchez votre prochaine lecture? Choisissez votre livre par genre, par avis, par auteur (e)...Et si vous voulez être tenu(e) au courant de la sortie de chaque avis, inscrivez vous à notre newsletter. <strong>Bonne lecture!</strong></p>
@@ -10,14 +10,10 @@
         
 
         <div class="headline">
-            <div><?php foreach($bookList as $currentBook) : ?>
-                <img src="<?= $currentBook->getBookpicture();?>" alt="imageintro" class="introimage">
-                <?php endforeach; ?>
-            </div>
             <div class="headline_intro">
-                <h2>L'oeuvre à la une</h2>
-                <div><?php foreach($bookList as $currentBook) : ?>
                     <div class="headline_text">
+                    <?php foreach($bookList as $currentBook) : ?>
+                        <h2>L'oeuvre à la une</h2>
                         <h3><?= $currentBook->getTitle(); ?></h3>
                         <h4><?= $currentBook->getName(); ?></h4>
                         <div><strong>Editeur :&nbsp;</strong><?= $currentBook->getEditor(); ?></div>
@@ -26,10 +22,12 @@
                         <p><?= $currentBook->getSummary(); ?></p>
                         <?php $updateUrl = $router->generate('book-review', ['bookId' => $currentBook->getBookid()]) ?>
                         <a href="<?= $updateUrl; ?>" >Voir plus</a>
-                    </div>
                     <?php endforeach; ?>
-                </div>
+                    </div>
             </div>
+            <?php foreach($bookList as $currentBook) : ?>
+            <img src="<?= $currentBook->getBookpicture();?>" alt="imageintro" class="introimage">
+            <?php endforeach; ?>
         </div>    
 
         <div class="newsletter">

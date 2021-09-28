@@ -87,6 +87,7 @@ class Book extends CoreModel {
         return $book;
     }
 
+    
 
 /* ------------
 --- GETTERS ET SETTERS ---

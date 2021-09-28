@@ -55,6 +55,16 @@ $router->map(
     'author-list'
 );
 
+$router->map(
+    'GET',
+    '/author/artwork/[i:author]',
+    [
+        'method' => 'artwork',
+        'controller' => '\App\Controllers\AuthorController'
+    ],
+    'author-artwork'
+);
+
 
 /***********
  * BOOK *

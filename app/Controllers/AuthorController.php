@@ -20,4 +20,16 @@ class AuthorController extends CoreController {
             'authorList' => $allAuthors,
         ]);
     }
+
+    /* Méthode s'occupant de la page des oeuvres de chaque auteur */
+
+    public function artwork($id)
+    {
+        $artworks = Author::artwork($id);
+
+        $this->show('author/artwork', [
+            'pageTitle' => 'Oeuvres de l\'auteur',
+            'artworks' => $artworks,
+        ]);
+    }
 }

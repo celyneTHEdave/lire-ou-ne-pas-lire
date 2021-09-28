@@ -7,6 +7,15 @@ html {
   margin: auto;
 }
 
+.page_title {
+  text-align: center;
+  font-family: 'Swear Display', serif;
+  font-weight: 400;
+  font-size: 3em;
+  letter-spacing: 0.05em;
+  margin-bottom: 0;
+}
+
 /* palette couleurs:
   bleu clair = 90, 156, 191
   bleu foncé=50,58,96
@@ -86,22 +95,18 @@ html {
   margin-left: auto;
   margin-right: auto;
   margin-top: 3em;
-  position: relative;
-  left: 6em;
   display: flex;
+  background-image: url("/public/assets/images/Camille_Corot_liseuse.jpg");
 }
 
 .intro_text {
-  background-color: rgba(90, 156, 191, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   color: rgb(50,58,96);
-  width: 20em;
+  width: 53em;
   display: block;
   padding-left: 2em;
   padding-right: 2em;
   padding-bottom: 2em;
-  position: absolute;
-  top: 11em;
-  left: -17em;
   font-family: 'PT Sans Pro', sans-serif;
   font-weight: 100;
 }
@@ -127,12 +132,13 @@ html {
 •••••••••••••••••• */
 
 .headline {
-  padding: 5em;
-  margin: auto;
+  padding: 3em;
   display: flex;
-  width: 75%;
-  position: relative;
-  margin-top: 0;
+  width: 60%;
+  border: black solid 2px;
+  margin: 5em auto 5em auto;
+  justify-content: space-around;
+/*   position: relative; */
 }
 
 .headline h2 {
@@ -158,7 +164,11 @@ html {
 }
 
 .headline img {
-  width: 30em;
+  width: 50%;
+  object-fit: cover;
+/*   position: absolute;
+  top: 3em;
+  left: 33em; */
 }
 
 .headline_text {
@@ -169,29 +179,26 @@ html {
 .headline a {
   text-decoration: none;
   color: rgb(255, 255, 255);
-  font-size: 1em;
+  font-size: 1.2em;
   font-family: 'Swear Display', serif;
   background-color: rgb(50, 58, 96);
   border-radius: 0.2em;
-  padding: 0.5em;
+  padding: 0.7em;
   letter-spacing: 0.05em;
 }
 
 .headline p {
-  margin-bottom: 1.5em;
+  margin-bottom: 2.5em;
   font-size: 1.2em;
 }
 
 .headline_intro {
-  padding-left: 4em;
-  padding-right: 2em;
+  padding-right: 3em;
   padding-bottom: 3em;
-  background-color: rgba(205, 244, 249, 0.9);
+/*   background-color: rgba(205, 244, 249, 0.9); */
   color: rgb(50, 58, 96);
   width: 30em;
-  position: absolute;
-  top: 3em;
-  left: 33em;
+  text-align: left;
 }
 
 /* ••••••••••••••••••
@@ -206,12 +213,12 @@ html {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
+  justify-content: center;
+/*   position: relative; */
 }
 
 .newsletter_image {
-  width: 30em;
-  position: absolute;
+  width: 30%;
 }
 
 .newsletter_text {
@@ -221,10 +228,12 @@ html {
   background-color: rgba(238, 236, 221, 0.8);
   color: rgb(50,58,96);
   width: 26em;
-  height: 28em;
-  position: absolute;
+  display: grid;
+  justify-content: space-between;
+/*   height: 28em; */
+/*   position: absolute;
   top: 2em;
-  left: -26em;
+  left: -26em; */
 }
 
 .newsletter h3 {
@@ -278,7 +287,6 @@ html {
 •••••••••••••••••• */
 
 #footer {
-  margin: auto;
   width: 100%;
   text-align: center;
   font-family: 'Swear Display', serif;
@@ -289,8 +297,6 @@ html {
   padding-bottom: 3em;
   background-color: rgb(50,58,96);
   color: rgb(238, 236, 221);
-  position: relative;
-  top: 32em;
 }
 
 #footer a {
@@ -380,6 +386,54 @@ html {
   font-size: 0.8em;
 }
 
+.summary_card {
+
+  width: 60%;
+  text-align: center;
+  border: black solid 2px;
+  margin: 5em auto 5em auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+}
+
+.summary_content {
+  width: 80%;
+  margin-top: 0;
+  padding-left: 2em;
+  margin-bottom: 3em;
+}
+
+.summary_content a {
+  text-decoration: none;
+  color: rgb(90, 156, 191);
+}
+
+.summary_card h3 {
+  font-family: 'Swear Display', serif;
+  font-weight: 400;
+  font-size: 2.5em;
+  letter-spacing: 0.05em;
+  text-align: left;
+  padding-top: 0;
+  margin-top: 0;
+
+}
+
+.summary_card p {
+  font-family: 'PT Sans Pro', sans-serif;
+  font-size: 1em;
+  text-align: left;
+  letter-spacing: 0.05em;
+}
+
+.summary_couv {
+  width: 9em;
+}
+
+
+
+
 
 /* ••••••••••••••••••
 •••••BOOK REVIEW•••••
@@ -387,19 +441,15 @@ html {
 
 .review {
   border: black solid 2px;
-  width: 70%;
+  width: 43%;
   margin: 5em auto 5em auto;
 }
 
 .review_card {
   font-family: 'PT Sans Pro', sans-serif;
   padding-left: 3em;
-  display: flex;
-}
-
-.review_text {
- width: 58%;
- padding-right: 2em;
+  padding-right: 3em;
+  padding-bottom: 2em;
 }
 
 .review_text h3 {
@@ -420,8 +470,11 @@ html {
 }
 
 .review_image {
-  width: 30em;
-
+  width: 100%;
+  margin: auto auto 1em auto;
+  height: 40em;
+  object-fit: cover;
+  margin-bottom: 2.5em;
 }
 
 .review_couv {
@@ -430,4 +483,23 @@ html {
 
 .summary_review {
   padding-top: 1em;
+}
+
+.review_link a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.5em;
+  font-family: 'Swear Display', serif;
+  background-color: rgb(50, 58, 96);
+  border-radius: 0.2em;
+  padding: 0.7em;
+  letter-spacing: 0.05em;
+}
+
+.review_link a:hover {
+  color: rgb(205, 244, 249);
+}
+
+.review_link {
+  text-align: center;
 }
